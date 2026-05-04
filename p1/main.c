@@ -1,9 +1,9 @@
 #include <stdio.h>
-
+#include <stdbool.h>
 int main(void)
 {
     int N;
-    int found = 0;
+    bool found = false;
 
     scanf("%d", &N);
 
@@ -14,7 +14,7 @@ int main(void)
                 if (900 * a + 750 * b + 200 * c == N) {
                     if (c < a || c < b) {
                         printf("%d %d %d\n", a, b, c);
-                        found = 1;
+                        found = true;
                     }
                 }
 
@@ -22,7 +22,7 @@ int main(void)
         }
     }
 
-    if (found == 0) {
+    if (!found) {
         printf("none\n");
     }
 
